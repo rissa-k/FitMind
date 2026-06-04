@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<!-- HEADER -->
+<head>
+    <title>FitMind Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="header-content">
+
+            <h1 class="logo">
+                FitMind
+            </h1>
+
+            <div id="authArea">
+                <a
+                    href="#"
+                    id="loginLink"
+                >
+                    Sign In
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="container">
+
+        <!-- HERO CARD / LANDING -->
+        <section class="hero-card">
+
+            <h1>
+                FitMind
+            </h1>
+
+            <p class="hero-tagline">
+
+                Personalized clothing size
+                recommendations powered by your
+                measurements, fit preferences,
+                and owned garments.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button id="jumpToProfileBtn">
+
+                    Create / Edit Profile
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- WELCOME -->
+        <div class="welcome-card">
+
+            <h2 id="welcomeMessage">
+                Welcome to FitMind!
+            </h2>
+
+            <p id="welcomeSubtext">
+                Create or load a profile to save
+                measurements, preferences, and garments.
+            </p>
+
+            <div id="profileSummary">
+
+                No profile loaded.
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROFILE -->
+         <h2 id="profileSection">
+
+            Your FitMind Profile
+
+        </h2>
+
+        <div class="profile-card">
+            <h2>Profile Information</h2>
+
+            <input
+                id="name"
+                placeholder="Name">
+
+            <label for="gender">
+                Gender
+            </label>
+
+            <select id="gender">
+
+                <option>
+                    Prefer Not To Say
+                </option>
+
+                <option>
+                    Female
+                </option>
+
+                <option>
+                    Male
+                </option>
+
+                <option>
+                    Non-Binary
+                </option>
+
+                <option>
+                    Other
+                </option>
+
+            </select>
+        </div>
+
+        <!-- FIT PREFERENCES -->
+        <div class="profile-card">
+            <h2>Fit Preferences</h2>
+
+            <label for="topFit">
+                Top Fit
+            </label>
+
+            <select id="topFit">
+
+                <option value="">
+                    Select...
+                </option>
+
+                <option>Slim</option>
+
+                <option>Regular</option>
+
+                <option>Relaxed</option>
+
+                <option>Oversized</option>
+
+            </select>
+
+            <label for="bottomFit">
+                Bottom Fit
+            </label>
+
+            <select id="bottomFit">
+
+                <option value="">
+                    Select...
+                </option>
+
+                <option>Slim</option>
+
+                <option>Regular</option>
+
+                <option>Relaxed</option>
+
+                <option>Oversized</option>
+
+            </select>
+        </div>
+
+        
+        <!-- PREFERRED SIZES -->
+        <div class="profile-card">
+            <h2>Preferred Sizes</h2>
+
+            <div class="size-row">
+
+                <input
+                    list="shirtSizes"
+                    id="shirtSize"
+                    placeholder="Preferred Shirt Size">
+
+                <datalist id="shirtSizes">
+
+                    <option value="XXS">
+                    <option value="XS">
+                    <option value="S">
+                    <option value="M">
+                    <option value="L">
+                    <option value="XL">
+                    <option value="XXL">
+
+                </datalist>
+
+                <input
+                    id="pantWaist"
+                    type="number"
+                    placeholder="Pant Waist">
+
+                <input
+                    id="pantLength"
+                    type="number"
+                    placeholder="Pant Length">
+
+            </div>
+
+            <div class="size-row">
+
+                <input
+                    id="dressSize"
+                    type="number"
+                    placeholder="Dress Size">
+
+                <input
+                    id="braSize"
+                    placeholder="Bra Size">
+
+            </div>
+        </div>
+        
+        <!-- MEASUREMENTS -->
+        <div class="profile-card">
+            <h2>Measurements</h2>
+
+            <input
+                id="chest"
+                type="number"
+                min="0"
+                step="0.1"
+                placeholder="Chest (in)">
+
+            <input 
+                id="waist" 
+                type="number"
+                min="0"
+                step="0.1"
+                placeholder="Waist (in)">
+
+            <input 
+                id="hips" 
+                type="number"
+                min="0"
+                step="0.1"
+                placeholder="Hips (in)">
+
+            <input 
+                id="height" 
+                type="number"
+                min="0"
+                step="0.1"
+                placeholder="Height (in)">
+        </div>
+        
+        <!-- OWNED GARMENTS -->
+         <div class="profile-card">
+            <h2>Owned Garments</h2>
+
+            <div class="garment-row">
+
+                <input
+                    id="brandInput"
+                    placeholder="Brand">
+
+                <select id="categoryInput">
+
+                    <option>Top</option>
+                    <option>T-Shirt</option>
+                    <option>Sweater</option>
+                    <option>Hoodie</option>
+                    <option>Jacket</option>
+                    <option>Dress</option>
+                    <option>Skirt</option>
+                    <option>Pants</option>
+                    <option>Jeans</option>
+                    <option>Shorts</option>
+                    <option>Bra</option>
+                    <option>Leggings</option>
+                    <option>Athletic Wear</option>
+                    <option>Other</option>
+
+                </select>
+
+                <input
+                    id="sizeInput"
+                    placeholder="Size">
+
+                <input
+                    id="notesInput"
+                    placeholder="Fit Notes">
+
+            </div>
+
+            <button id="addGarmentBtn">
+                Add Garment
+            </button>
+
+            <h3>Saved Garments</h3>
+
+            <div id="garmentList">
+
+            </div>
+         </div>
+        
+
+        <!-- SAVE / LOAD PROFILE -->
+        <div class="action-buttons">
+
+            <button id="saveBtn">
+                Save Profile
+            </button>
+
+            <button id="exportBtn">
+                Export Profile
+            </button>
+
+            <p id="status"></p>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="loginModal"
+        class="modal hidden"
+    >
+
+        <div class="modal-content">
+
+            <h2>
+                Sign In
+            </h2>
+
+            <input
+                id="usernameInput"
+                placeholder="Username"
+            >
+
+            <input
+                id="passwordInput"
+                type="password"
+                placeholder="Password"
+            >
+
+            <button id="loginBtn">
+
+                Sign In
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
